@@ -6,16 +6,23 @@ import Logo from "../assets/cropped-logo.png";
 <nav class="navbar">
   <div class="content">
     <div class="logo">
-      <a href="/"><Image class="" src={Logo} alt="" /></a>
+      <div class="logo-image">
+        <a href="/"><Image class="" src={Logo} alt="" /></a>
+      </div>
+      <div>
+        <p>Anand Jivan</p>
+        <p>Foundation Trust</p>
+      </div>
     </div>
     <ul class="menu-list">
       <div class="icon cancel-btn">
         <i class="fas fa-times"></i>
       </div>
       <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
       <li><a href="/events">Events</a></li>
       <li><a href="/contact">Contact</a></li>
-      <li><a href="/news">News</a></li>
+
       <li><a href="/volunteer">Volunteer</a></li>
 
       <li><a class="btn" href="/donate">Donate</a></li>
@@ -40,7 +47,7 @@ import Logo from "../assets/cropped-logo.png";
     background: rgb(0, 123, 255, 0.3);
   }
   .content {
-    max-width: 1250px;
+    max-width: 1450px;
     margin: auto;
     padding: 0 30px;
   }
@@ -50,7 +57,7 @@ import Logo from "../assets/cropped-logo.png";
     z-index: 2;
     /* padding: 25px 0; */
     transition: all 0.3s ease;
-    background-color: #00715d;
+    background-color: var(--green);
     border-bottom: 0.5px solid #ffd700;
   }
   .navbar.sticky {
@@ -58,9 +65,21 @@ import Logo from "../assets/cropped-logo.png";
     padding: 10px 0;
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
   }
-  .logo {
+  .logo-image {
     height: 100px;
     width: auto;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: "center";
+    gap: 1rem;
+  }
+  .logo p {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 1px;
   }
   img {
     height: 100%;
@@ -97,7 +116,7 @@ import Logo from "../assets/cropped-logo.png";
     padding: 0 1.5rem;
   }
   .menu-list li a:hover {
-    color: #007bff;
+    color: yellow;
   }
 
   .icon {
