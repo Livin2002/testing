@@ -33,9 +33,13 @@ import Logo from "../assets/cropped-logo.png";
 
       <div class="footer-col">
         <h4>Contacts</h4>
+        <p class="address">
+          Anand Jivan Foundation Trust Mabbi Belauna, Post- Lalshahpur,
+          Darbhanga, Bihar 846005 INDIA
+        </p>
         <div class="social-links">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
           <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
@@ -79,12 +83,18 @@ import Logo from "../assets/cropped-logo.png";
     font-weight: 500;
     position: relative;
   }
+  .address {
+    font-size: 16px;
+    color: #bbbbbb;
+    font-weight: 300;
+    padding: 0 0 1rem 0;
+  }
   .footer-col h4::before {
     content: "";
     position: absolute;
     left: 0;
     bottom: -10px;
-    background-color: #e91e63;
+    background-color: var(--yellow);
     height: 2px;
     box-sizing: border-box;
     width: 50px;

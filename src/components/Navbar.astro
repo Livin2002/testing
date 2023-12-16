@@ -10,8 +10,8 @@ import Logo from "../assets/cropped-logo.png";
         <a href="/"><Image class="" src={Logo} alt="" /></a>
       </div>
       <div class="logo-title">
-        <p>Anand Jivan</p>
-        <p>Foundation Trust</p>
+        <a class="name" href="/">Anand Jivan Foundation Trust</a>
+        <div><a class="moto" href="/">Let's make better life</a></div>
       </div>
     </div>
     <ul class="menu-list">
@@ -25,7 +25,7 @@ import Logo from "../assets/cropped-logo.png";
 
       <li><a href="/volunteer">Volunteer</a></li>
 
-      <li><a class="btn" href="/donate">Donate</a></li>
+      <a class="btn" href="/donate">Donate</a>
     </ul>
     <div class="icon menu-btn">
       <i class="fas fa-bars"></i>
@@ -34,18 +34,6 @@ import Logo from "../assets/cropped-logo.png";
 </nav>
 
 <style>
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-  ::selection {
-    background: rgb(0, 123, 255, 0.3);
-  }
   .content {
     max-width: 1450px;
     margin: auto;
@@ -57,8 +45,9 @@ import Logo from "../assets/cropped-logo.png";
     z-index: 2;
     /* padding: 25px 0; */
     transition: all 0.3s ease;
-    background-color: var(--green);
+    background-color: #091c11;
     border-bottom: 0.5px solid #ffd700;
+    padding: 0.5rem 0;
   }
   .navbar.sticky {
     background-color: #2f0c0c;
@@ -81,6 +70,15 @@ import Logo from "../assets/cropped-logo.png";
     color: white;
     letter-spacing: 1px;
   }
+
+  .name {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+  .moto {
+    color: rgb(140, 140, 140);
+  }
   img {
     height: 100%;
     width: 100%;
@@ -91,26 +89,22 @@ import Logo from "../assets/cropped-logo.png";
     align-items: center;
     justify-content: space-between;
   }
-  .navbar .logo a {
+  /* .navbar .logo a {
     color: #fff;
     font-size: 30px;
     font-weight: 600;
     text-decoration: none;
-  }
+  } */
   .navbar .menu-list {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .menu-list li {
-    list-style: none;
   }
 
   .menu-list li a {
     color: #fff;
     font-size: 18px;
     font-weight: 500;
-    margin-left: 25px;
     text-decoration: none;
     transition: all 0.3s ease;
     padding: 0 1.5rem;
@@ -130,24 +124,7 @@ import Logo from "../assets/cropped-logo.png";
     right: 30px;
     top: 20px;
   }
-  .popup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #ffffff;
-    font-weight: bold;
-    padding: 20px;
-    border-radius: 5px;
-    z-index: 1119999;
-    font-weight: bold;
-    padding: 2rem;
-    /* Add other styles as needed */
-  }
+
   .btn {
     padding: 0.9rem 2rem;
     background-color: yellow;
