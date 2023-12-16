@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+    font-family: 'Lobster', sans-serif;
+    font-family: 'Mulish', sans-serif;
+    --bg-color: #ede2f280;
+    --sub-color: #495579;
+    --button-color: #263159;
+    --h1-color: #251749;
+    --white-color: #ffffff;
+    --dark-color: #202D41;
+    --darker-color: #1B2637;
+    --g-text: #FFD700;
+    --btn-bg: #c70039;
+
+
+}
