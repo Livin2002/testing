@@ -1,21 +1,10 @@
 ---
-import Navbar from "../components/Navbar.astro";
-import Layout from "../layouts/Layout.astro";
+import CardProfile from "../components/CardProfile.astro";
+import Header from "../layouts/Header.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-  <main>
-    <h1>Contact</h1>
-  </main>
-</Layout>
+<Header route="Contact">
+  <CardProfile />
+</Header>
 
-<style>
-  main {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 50px;
-    flex-wrap: wrap;
-  }
-</style>
+<style></style>

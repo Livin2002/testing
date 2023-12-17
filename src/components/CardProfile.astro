@@ -1,0 +1,87 @@
+---
+import { Image } from "astro:assets";
+import Founder from "../assets/founder.jpg";
+interface cardPorps {
+  ImagePath: string;
+  Name: string;
+  Position: string;
+}
+const { ImagePath, Name, Position } = Astro.props;
+---
+
+<div class="container">
+  <div class="card">
+    <div class="card-top">
+      <Image src={ImagePath} alt="Employee Photo" />
+    </div>
+    <div class="card-bottom">
+      <h2 class="name">{Name}</h2>
+      <p class="position">{Position}</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    min-width: 300px;
+    /* border: 1px solid #ccc; */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: linear-gradient(
+      to top left,
+      transparent 70%,
+      rgb(209, 226, 79) 90%
+    );
+  }
+  .card:hover {
+    box-shadow:
+      rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px,
+      rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px,
+      rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+  .card-top {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    padding: 1rem;
+  }
+  .card-top:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .card-bottom {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+
+  .name {
+    margin-top: 0;
+  }
+
+  .position {
+    margin-bottom: 0;
+    color: #666;
+  }
+</style>
