@@ -1,18 +1,18 @@
 ---
 import { Image } from "astro:assets";
-import Founder from "../assets/founder.jpg";
-interface cardPorps {
-  ImagePath: string;
+
+interface card {
+  imagePath: string;
   Name: string;
   Position: string;
 }
-const { ImagePath, Name, Position } = Astro.props;
+const { imagePath, Name, Position } = Astro.props;
 ---
 
 <div class="container">
   <div class="card">
     <div class="card-top">
-      <Image src={ImagePath} alt="Employee Photo" />
+      <Image src={imagePath} alt="" />
     </div>
     <div class="card-bottom">
       <h2 class="name">{Name}</h2>

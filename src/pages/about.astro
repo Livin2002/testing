@@ -1,10 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import Header from "../layouts/Header.astro";
 import AboutImg from "../assets/about.jpg";
 import Check from "../assets/check.svg";
 import CardProfile from "../components/CardProfile.astro";
-import Img2 from "../assets/mission.jpg";
-import { Image } from "astro:assets";
+
 import Founder from "../assets/founder.jpg";
 import Cofounder from "../assets/cofounder.jpg";
 ---
@@ -55,17 +55,17 @@ import Cofounder from "../assets/cofounder.jpg";
       </div>
       <div class="profile">
         <CardProfile
-          ImagePath={Founder}
+          imagePath={Founder}
           Name="Mr. Guddu Kumar"
           Position="President"
         />
         <CardProfile
-          ImagePath={Cofounder}
+          imagePath={Cofounder}
           Name="Mrs. Pooja Kumari"
           Position="Co-Founder"
         />
         <CardProfile
-          ImagePath={Founder}
+          imagePath={Founder}
           Name="Mr. Kumar "
           Position="Secretary"
         />
