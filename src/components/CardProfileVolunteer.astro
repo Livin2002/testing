@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 
 interface card {
-  imagePath: string;
+  imagePath: any;
   Name: string;
   Position: string;
 }
@@ -35,7 +35,7 @@ const { imagePath, Name, Position } = Astro.props;
   }
 
   .card {
-    width: 300px;
+    width: 275px;
     /* border: 1px solid #ccc; */
     border-radius: 8px;
     overflow: hidden;
@@ -52,7 +52,7 @@ const { imagePath, Name, Position } = Astro.props;
 
   .card-top {
     width: 100%;
-    height: 270px;
+    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;

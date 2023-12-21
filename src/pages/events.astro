@@ -1,9 +1,73 @@
 ---
 import Header from "../layouts/Header.astro";
+import EventCard from "../components/EventCard.astro";
+import Bg from "../assets/bg.jpg";
 ---
 
 <Header route="Events">
-  <div>hello</div>
+  <div class="grid-container">
+    <div class="grid-item">
+      <EventCard
+        ImagePath={Bg}
+        Event="Learn How We Make Events"
+        Time="8:30pm"
+        Date="1/Sep/23"
+        Location="Darbhanga"
+      />
+    </div>
+    <div class="grid-item">
+      <EventCard
+        ImagePath={Bg}
+        Event="Learn How We Make Events"
+        Time="8:30pm"
+        Date="1/Sep/23"
+        Location="Darbhanga"
+      />
+    </div>
+    <div class="grid-item">
+      <EventCard
+        ImagePath={Bg}
+        Event="Learn How We Make Events"
+        Time="8:30pm"
+        Date="1/Sep/23"
+        Location="Darbhanga"
+      />
+    </div>
+    <div class="grid-item">
+      <EventCard
+        ImagePath={Bg}
+        Event="Learn How We Make Events"
+        Time="8:30pm"
+        Date="1/Sep/23"
+        Location="Darbhanga"
+      />
+    </div>
+  </div>
 </Header>
 
-<style></style>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+    padding: 3rem;
+  }
+
+  .grid-item {
+    /* padding: 25px; */
+    text-align: center;
+    padding: 2rem;
+  }
+
+  @media (max-width: 700px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      width: 100%;
+      padding: 3rem 0.5rem;
+    }
+    .grid-item {
+      padding: 0;
+    }
+  }
+</style>

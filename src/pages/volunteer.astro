@@ -3,7 +3,31 @@ import Header from "../layouts/Header.astro";
 ---
 
 <Header route="Volunteer">
-  <div>hello</div>
+  <main>
+    <div class="container">
+      <div class="item requirmnets"></div>
+      <div class="item">
+        <form action=""></form>
+      </div>
+    </div>
+  </main>
 </Header>
 
-<style></style>
+<style>
+  main {
+    background-color: var(--lightgreen2);
+    height: 100vh;
+    padding: 2rem;
+  }
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: red;
+    height: 10vh;
+    padding: 2rem;
+    display: flex;
+  }
+  .item {
+    flex: 1;
+  }
+</style>

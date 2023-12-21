@@ -40,15 +40,15 @@ import V4 from "../assets/v-4.jpeg";
         <ul>
           <li class="check">
             <Image src={Check} alt="" />
-            <p>Education Program</p>
+            <a href="/program">Education Program</a>
           </li>
           <li class="check">
             <Image src={Check} alt="" />
-            <p>Healthcare Program</p>
+            <a href="/program">Healthcare Program</a>
           </li>
           <li class="check">
             <Image src={Check} alt="" />
-            <p>Ration Program</p>
+            <a href="/program">Ration Program</a>
           </li>
         </ul>
       </div>
@@ -158,6 +158,13 @@ import V4 from "../assets/v-4.jpeg";
     display: flex;
     align-items: center;
     gap: 0.4rem;
+  }
+  .check a {
+    color: black;
+
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 600;
   }
   .profile {
     display: flex;
