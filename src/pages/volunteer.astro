@@ -1,33 +1,105 @@
 ---
+import Zipper from "../components/Zipper.astro";
 import Header from "../layouts/Header.astro";
+import VolunteerImg from "../assets/volunteer.jpg";
+import { Image } from "astro:assets";
 ---
 
 <Header route="Volunteer">
   <main>
     <div class="container">
-      <div class="item requirmnets"></div>
       <div class="item">
-        <form action=""></form>
+        <div class="details">
+          <span>Anand Jivan Foundation Trust</span>
+          <h1>Requirements</h1>
+          <p>
+            You can also contribute to our mission of aiding the less fortunate
+            by joining our Foundation as a volunteer. Your involvement could
+            include educating children, assisting in distribution camps,
+            supporting hospitals, and engaging in various activities for
+            underprivileged and special needs groups in society. The primary
+            qualifications needed for this role are your time, a few skills, and
+            dedication to the cause.
+          </p>
+        </div>
       </div>
+
+      <div class="item image-con">
+        <Image src={VolunteerImg} alt="" />
+      </div>
+    </div>
+
+    <div class="registration">
+      <form action=""></form>
     </div>
   </main>
 </Header>
-
 <style>
   main {
-    background-color: var(--lightgreen2);
-    height: 100vh;
-    padding: 2rem;
+    min-height: 100vh;
+    /* background-color: var(--lightgreen2); */
+    padding: 3rem;
   }
   .container {
     max-width: 1440px;
     margin: 0 auto;
-    background-color: red;
-    height: 10vh;
-    padding: 2rem;
     display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    padding: 3rem 2rem;
   }
   .item {
     flex: 1;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem;
+  }
+  .image-con {
+    height: 400px;
+    width: auto;
+    overflow: hidden;
+  }
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .details p {
+    font-size: 22px;
+    font-weight: bold;
+    width: 550px;
+  }
+  .details span {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--yellow);
+  }
+  .details h1 {
+    color: var(--green);
+  }
+  @media (max-width: 780px) {
+    .container {
+      flex-direction: column-reverse;
+      width: 100%;
+      padding: 0rem;
+    }
+    .details {
+      padding: 1rem;
+    }
+    .details p {
+      width: 100%;
+      font-size: 18px;
+    }
+    .image-con {
+      height: auto;
+      width: 100%;
+    }
+    main {
+      padding: 0;
+    }
   }
 </style>

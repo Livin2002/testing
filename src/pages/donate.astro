@@ -1,13 +1,277 @@
 ---
+import { Image } from "astro:assets";
 import Header from "../layouts/Header.astro";
+import EducationImg from "../assets/education.jpg";
+import HealthCare from "../assets/healthcare.jpg";
+import Rtion from "../assets/ration.jpg";
 ---
 
 <Header route="Donate">
-  <div>hello</div>
+  <div class="main-container">
+    <div class="topsection">
+      <div class="heading">
+        <p>Empower Hope: Transform Lives with Your Generosity</p>
+      </div>
+      <div class="top-card">
+        <h1>Donate Where The Need Is</h1>
+        <p>
+          In a world where countless individuals and communities face adversity
+          and hardship, your generosity can be the beacon of hope they
+          desperately need.
+        </p>
+        <div class="button-container">
+          <button class="top-button">
+            <form>
+              <script
+                src="https://checkout.razorpay.com/v1/payment-button.js"
+                data-payment_button_id="pl_NFWIoTN0HiWCfs"
+                async></script>
+            </form>
+          </button>
+          <button class="below-button">Donate now</button>
+        </div>
+      </div>
+    </div>
+    <div class="selection">
+      <h1 class="title">
+        Select a cause you'd like to support and make a donation
+      </h1>
+      <div class="card-section">
+        <div class="donation-card">
+          <div class="image-box">
+            <Image src={EducationImg} alt="" />
+          </div>
+          <div class="d-card-content">
+            <h1>Support Equitable Education: Every Contribution Counts!</h1>
+            <p>
+              Welcome to our Education for All Fund! Your support helps break
+              barriers to education, providing opportunities for underserved
+              communities. Every donation, no matter the size, contributes to
+              empowering minds and shaping a brighter future. Join us in making
+              education accessible to all!"
+            </p>
+            <div class="button-container">
+              <button class="top-button">
+                <form>
+                  <script
+                    src="https://checkout.razorpay.com/v1/payment-button.js"
+                    data-payment_button_id="pl_NFWIoTN0HiWCfs"
+                    async></script>
+                </form>
+              </button>
+              <button class="below-button">Donate now</button>
+            </div>
+          </div>
+        </div>
+        <div class="donation-card">
+          <div class="image-box">
+            <Image src={Rtion} alt="" />
+          </div>
+          <div class="d-card-content">
+            <h1>'Food for All' Initiative to Provide Essential Rations</h1>
+            <p>
+              Join Our Mission: Providing Essentials for Families in Need! The
+              'Food for All Initiative' aims to ensure no one goes to bed
+              hungry. Your support enables us to distribute essential food
+              supplies to underprivileged communities.
+            </p>
+            <div class="button-container">
+              <button class="top-button">
+                <form>
+                  <script
+                    src="https://checkout.razorpay.com/v1/payment-button.js"
+                    data-payment_button_id="pl_NFWIoTN0HiWCfs"
+                    async></script>
+                </form>
+              </button>
+              <button class="below-button">Donate now</button>
+            </div>
+          </div>
+        </div>
+        <div class="donation-card">
+          <div class="image-box">
+            <Image src={HealthCare} alt="" />
+          </div>
+          <div class="d-card-content">
+            <h1>Support Equitable Education: Every Contribution Counts!</h1>
+            <p>
+              Welcome to our Education for All Fund! Your support helps break
+              barriers to education, providing opportunities for underserved
+              communities. Every donation, no matter the size, contributes to
+              empowering minds and shaping a brighter future.
+            </p>
+            <div class="button-container">
+              <button class="top-button">
+                <form>
+                  <script
+                    src="https://checkout.razorpay.com/v1/payment-button.js"
+                    data-payment_button_id="pl_NFWIoTN0HiWCfs"
+                    async></script>
+                </form>
+              </button>
+              <button class="below-button">Donate now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </Header>
 
-<style></style>
+<style>
+  .button-container {
+    position: relative;
+    display: inline-block;
+  }
+  .heading {
+    flex: 1;
+  }
+  .heading p {
+    font-size: 52px;
+    font-weight: 700;
+    color: white;
+  }
 
-<script
-  src="https://www.paypal.com/sdk/js?client-id=AVaDooosKtu0jUY-p7A1y6qdyXiRASMhW5iWTjfQDFyqKCCOOzMHq9xV48K9_UdLGok9YI8p37bd0sfo&components=buttons"
-></script>
+  .topsection {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    /* gap: 15rem; */
+    background-image: linear-gradient(
+      to right top,
+      #052537,
+      #00566e,
+      #008c81,
+      #00c066,
+      #a8eb12
+    );
+  }
+  .top-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem;
+    max-width:;
+    max-width: 400px;
+    height: fit-content;
+    border-radius: 27px;
+    background: #9cdeb8;
+    box-shadow:
+      15px 15px 48px #618a72,
+      -15px -15px 48px #d7fffe;
+  }
+  .top-card h1 {
+    font-size: 26px;
+    color: white;
+  }
+  .top-card p {
+    color: rgb(87, 86, 86);
+  }
+  .top-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100px;
+    height: 30px;
+  }
+  .below-button {
+    padding: 0.7rem 1rem;
+    background-color: var(--green);
+    color: var(--yellow);
+    font-weight: bold;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    /* width: 100%; */
+  }
+  .selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    color: #618a72;
+  }
+  .donation-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    width: 400px;
+    gap: 1rem;
+
+    border-radius: 0px;
+    background: #d5e198;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  .donation-card h1 {
+    font-size: 20px;
+  }
+  .donation-card p {
+    font-size: 16px;
+    min-height: 150px;
+  }
+  .image-box {
+    width: 400px;
+    height: auto;
+    overflow: hidden;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .d-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem;
+  }
+  .card-section {
+    display: flex;
+    gap: 1rem;
+  }
+  .title {
+    padding: 2rem 0;
+    font-weight: 700;
+    font-size: 36px;
+    width: 700px;
+    text-align: center;
+  }
+  @media (max-width: 780px) {
+    .card-section {
+      flex-direction: column;
+    }
+    .title {
+      width: 100%;
+      font-size: 30px;
+    }
+    .image-box {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+    .topsection {
+      flex-direction: column;
+      justify-content: center;
+      height: fit-content;
+      gap: 2rem;
+      padding: 2rem 1rem;
+    }
+    .heading p {
+      font-size: 36px;
+    }
+  }
+</style>

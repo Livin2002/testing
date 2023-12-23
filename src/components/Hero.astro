@@ -63,6 +63,7 @@
     transition:
       background-color 0.5s ease-in-out,
       color 0.5s ease-in-out;
+       width: 100%;
   }
   .btn1 {
     padding: 0.9rem 2rem;
@@ -75,6 +76,8 @@
     transition:
       background-color 0.5s ease-in-out,
       color 0.5s ease-in-out;
+
+         width: 100%;
   }
   .btn:hover {
   }
@@ -89,7 +92,30 @@
       width: 100%;
     }
     .heading p {
-      font-size: 50px;
+      font-size: 30px;
+      padding: 3rem 0 0  0;
+    }
+    main {
+      height: fit-content;
+    }
+    .button {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+ 
+    padding: 1rem;
+
+  }
+
+  @media (max-width: 580px) {
+    .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
     }
   }
 </style>
