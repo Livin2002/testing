@@ -1,21 +1,23 @@
 ---
 import Hero from "../components/Hero.astro";
-import Vission from "../components/Vission.astro";
-import HeroSection from "../components/Vission.astro";
+import Vission from "../components/SliderMain.astro";
+import HeroSection from "../components/SliderMain.astro";
 import Tab from "../components/Tab.astro";
 import Layout from "../layouts/Layout.astro";
 import Zipper from "../components/Zipper.astro";
 import Helping from "../assets/helping.jpg";
+import Herotest from "../components/Herotest.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <Hero />
+  <!-- <Hero /> -->
+  <Herotest />
   <Zipper
     Heading="Helping each other can make world Better"
     Description="Preventing sexual exploitation of boys/Girls,to stop the evil practice of child Labour, to free children from child labour and to work for their rehabilitation, education, their all-round development and to run a campaign to provide them legal rights. "
     ImagePath={Helping}
     Reverse
   />
-  <Vission />
+  <!-- <Vission /> -->
   <Tab />
 </Layout>

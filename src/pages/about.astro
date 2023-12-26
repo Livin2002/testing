@@ -12,6 +12,7 @@ import V1 from "../assets/v-1.jpg";
 import V2 from "../assets/v-2.jpg";
 import V3 from "../assets/v-3.jpg";
 import V4 from "../assets/v-4.jpeg";
+import SliderMain from "../components/SliderMain.astro";
 ---
 
 <Header route="About">
@@ -58,7 +59,7 @@ import V4 from "../assets/v-4.jpeg";
         <h1>Anand Jivan Foundation Trust</h1>
         <h2>Founders & Executives</h2>
       </div>
-      <div class="profile">
+      <!-- <div class="profile">
         <CardProfile
           imagePath={Founder}
           Name="Mr. Guddu Kumar"
@@ -74,35 +75,14 @@ import V4 from "../assets/v-4.jpeg";
           Name="Mr. Kumar "
           Position="Secretary"
         />
-      </div>
+      </div> -->
+      <SliderMain />
     </div>
     <div class="section3">
       <div class="joinv">
         <p>Join the volunteer team</p>
         <h1>Join your hand with us for a better life and future</h1>
         <a href="" class="btn">Become a volunteer</a>
-      </div>
-      <div class="volunteer">
-        <CardProfileVolunteer
-          imagePath={V1}
-          Name="Mr. Shuddhu Kumar"
-          Position="Volunteer"
-        />
-        <CardProfileVolunteer
-          imagePath={V2}
-          Name="Mr. Pintu Kumar"
-          Position="Volunteer"
-        />
-        <CardProfileVolunteer
-          imagePath={V3}
-          Name="Mr. Ganes Kumar"
-          Position="Volunteer"
-        />
-        <CardProfileVolunteer
-          imagePath={V4}
-          Name="Mr. Sujeet Kumar"
-          Position="Volunteer"
-        />
       </div>
     </div>
   </main>

@@ -1,366 +1,390 @@
-<div class="hero-slider" data-carousel>
-  <div
-    class="carousel-cell"
-    style="background-image:url(https://78.media.tumblr.com/469798be38e86cc01ea4ba08563af785/tumblr_p38kazKBIX1snegd3o1_1280.jpg);"
-  >
-    <div class="overlay"></div>
-    <div class="slide-content">
-      <div class="mask">
-        <h2 class="title">Slide 1</h2>
-      </div>
-      <div class="divider"></div>
-      <div class="mask">
-        <p class="caption">Flickity is fun to use.</p>
-        <a href="https://flickity.metafizzy.co/" target="_blank" class="btn"
-          >Tell me more</a
-        >
-      </div>
-    </div>
+---
+import { Image } from "astro:assets";
+import WomenEmp from "../assets/womenemp.jpg";
+---
+
+<div id="banner">
+  <Image class="banner-img" src={WomenEmp} alt="Women empowerment image" />
+  <div class="overlay"></div>
+  <p>
+    Empower Her, Empower the World<span
+      >Strength in Sisterhood: Rise, Lead, Inspire</span
+    >
+  </p>
+
+  <div class="button">
+    <a class="btn" href="/donate">DONATE</a>
+    <a class="btn1" href="">DISCOVER</a>
   </div>
-  <div
-    class="carousel-cell"
-    style="background-image:url(https://78.media.tumblr.com/f3577e640674f66119dad5ce61b4582c/tumblr_ozf8vw9LYN1snegd3o1_1280.jpg);"
-  >
-    <div class="overlay"></div>
-    <div class="slide-content">
-      <div class="mask">
-        <h2 class="title">Slide 2</h2>
-      </div>
-      <div class="divider"></div>
-      <div class="mask">
-        <p class="caption">Flickity is flexible.</p>
-        <a href="https://flickity.metafizzy.co/" target="_blank" class="btn"
-          >Tell me more</a
-        >
-      </div>
-    </div>
+  <div class="arrow">
+    <i class="fa-solid fa-arrow-left arrow_left"></i>
+    <i class="fa-solid fa-arrow-right arrow_right"></i>
   </div>
-  <div
-    class="carousel-cell"
-    style="background-image:url(https://78.media.tumblr.com/895918f98ebb3644e885f663bf63ba61/tumblr_pa4fmzV4kV1snegd3o1_1280.jpg);"
-  >
-    <div class="overlay"></div>
-    <div class="slide-content">
-      <div class="mask">
-        <h2 class="title">Slide 3</h2>
-      </div>
-      <div class="divider"></div>
-      <div class="mask">
-        <p class="caption">Flickity is awesome.</p>
-        <a href="https://flickity.metafizzy.co/" target="_blank" class="btn"
-          >Tell me more</a
-        >
-      </div>
-    </div>
-  </div>
+
+  <div class="dots"></div>
 </div>
 
 <style>
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+  }
+
+  #banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+  }
   .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.4)
+    );
+    z-index: -1;
+  }
+  .banner-img {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
-    bottom: 0;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+  }
+
+  #banner p {
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 66px;
+    color: white;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+  }
+  #banner span {
+    display: block;
+    font-weight: 400;
+    font-size: 30px;
+    width: 900px;
+  }
+
+  /* Gestion des flèches du carrousel */
+  #banner .arrow {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 98%;
+    color: white;
+    font-size: 4rem;
+    padding-right: 0.7rem;
+    padding-left: 0.7rem;
+    cursor: pointer;
+  }
+  #banner .arrow_left {
     left: 0;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+  }
+
+  #banner .arrow_left:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
+  #banner .arrow_right {
     right: 0;
-    background: linear-gradient(
-      to bottom,
-      transparentize(#0e1d33, 0.2),
-      transparentize(#0e1d33, 0.8)
-    );
+    opacity: 0.4;
+    transition: all 0.3s ease;
   }
 
-  .hero-slider {
+  #banner .arrow_right:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
+  /* Gestion des points du carrousel */
+  .dots {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+  }
+  .dot {
+    margin-inline: 5px;
+    width: 13px;
+    height: 13px;
+    background-color: #ffffff00;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
+  .dot_selected {
+    background-color: #fff;
+  }
+  .btn {
+    padding: 0.9rem 2rem;
+    background-color: yellow;
+    color: green;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition:
+      background-color 0.5s ease-in-out,
+      color 0.5s ease-in-out;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    z-index: 1000;
+  }
+  .btn1 {
+    padding: 0.9rem 2rem;
+    /* background-color: yellow; */
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition:
+      background-color 0.5s ease-in-out,
+      color 0.5s ease-in-out;
 
-    .carousel-cell {
+    width: 100%;
+    z-index: 1000;
+  }
+  .btn:hover {
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem 0 0 0;
+  }
+  @media (max-width: 700px) {
+    #banner {
+      padding: 3rem 0;
+      height: fit-content;
+    }
+    #banner p {
       width: 100%;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      .slide-content {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        text-align: center;
-
-        .title {
-          position: relative;
-          font-family: $font-family-primary;
-          font-size: 3.2rem;
-          letter-spacing: 3px;
-          text-transform: uppercase;
-          color: #ffffff;
-        }
-
-        .caption {
-          font-family: $font-family-secondary;
-          font-size: 2.2rem;
-          color: #ffffff;
-          margin-bottom: 30px;
-        }
-
-        .btn {
-          display: inline-block;
-          border: 1px solid #fff;
-          padding: 14px 18px;
-          text-transform: uppercase;
-          font-family: $font-family-secondary;
-          font-size: 0.9rem;
-          letter-spacing: 2px;
-          color: #fff;
-          text-decoration: none;
-
-          &:hover {
-            background: #fff;
-            color: #000;
-            transition: all 0.2s ease;
-          }
-        }
-      }
+      padding: 3rem 0 0 0;
+      font-size: 40px;
+      line-height: 50px;
+    }
+    #banner span {
+      width: 100%;
+      padding: 3rem 0 0 0;
+      font-size: 22px;
     }
 
-    .flickity-prev-next-button {
-      width: 80px;
-      height: 80px;
-      background: transparent;
-
-      &:hover {
-        background: transparent;
-      }
-
-      .arrow {
-        fill: white;
-      }
+    #banner .arrow {
+      font-size: 2rem;
     }
-
-    .flickity-page-dots {
-      bottom: 30px;
-
-      .dot {
-        width: 30px;
-        height: 4px;
-        opacity: 1;
-        background: rgba(255, 255, 255, 0.5);
-        border: 0 solid white;
-        border-radius: 0;
-
-        &.is-selected {
-          background: #ff0000;
-          border: 0 solid #ff0000;
-        }
-      }
-    }
-  }
-
-  /* --------------------------------
-Masking
--------------------------------- */
-  .slide-content {
-    .title,
-    .caption,
-    .btn {
-      position: relative;
-      opacity: 0;
-      animation-fill-mode: forwards;
-    }
-  }
-
-  .slide-content.mask {
-    .mask {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .title {
-      animation-duration: 0.4s;
-      animation-delay: 0.7s;
-      animation-name: slide-up;
-      animation-fill-mode: backwards;
-      opacity: 1;
-    }
-
-    .divider {
-      display: inline-block;
-      position: relative;
-      margin: 5px auto;
-      height: 2px;
-      width: 60%;
-      background-color: #ffffff;
-      animation: divider-mask 1s 0.3s both;
-    }
-
-    .caption,
-    .btn {
-      animation-duration: 0.4s;
-      animation-delay: 0.7s;
-      animation-name: slide-down;
-    }
-  }
-
-  @-webkit-keyframes slide-up {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(100%);
-    }
-
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0);
-    }
-  }
-
-  @-moz-keyframes slide-up {
-    0% {
-      opacity: 0;
-      -moz-transform: translateY(100%);
-    }
-
-    100% {
-      opacity: 1;
-      -moz-transform: translateY(0);
-    }
-  }
-
-  @keyframes slide-up {
-    0% {
-      opacity: 0;
-      transform: translateY(100%);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @-webkit-keyframes slide-down {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(-100%);
-    }
-
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0);
-    }
-  }
-
-  @-moz-keyframes slide-down {
-    0% {
-      opacity: 0;
-      -moz-transform: translateY(-100%);
-    }
-
-    100% {
-      opacity: 1;
-      -moz-transform: translateY(0);
-    }
-  }
-
-  @keyframes slide-down {
-    0% {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @-webkit-keyframes divider-mask {
-    0%,
-    100% {
-      transform: scaleX(0);
-    }
-
-    40%,
-    60% {
-      -webkit-transform: scaleX(1);
-    }
-  }
-
-  @-moz-keyframes divider-mask {
-    0%,
-    100% {
-      transform: scaleX(0);
-    }
-
-    40%,
-    60% {
-      -moz-transform: scaleX(1);
-    }
-  }
-
-  @keyframes divider-mask {
-    0%,
-    100% {
-      transform: scaleX(0);
-    }
-
-    40%,
-    60% {
-      transform: scaleX(1);
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-direction: column;
     }
   }
 </style>
 
 <script is:inline>
-  var options = {
-    accessibility: true,
-    prevNextButtons: true,
-    pageDots: true,
-    setGallerySize: false,
-    arrowShape: {
-      x0: 10,
-      x1: 60,
-      y1: 50,
-      x2: 60,
-      y2: 45,
-      x3: 15,
+  /*=============== TABLEAU D'IMAGES ===============*/
+  const slides = [
+    {
+      imageUrl: "src/assets/womenemp.jpg",
+      tagLine:
+        "Empower Her, Empower the World, Strength in Sisterhood: Rise, Lead, Inspire",
     },
-  };
+    {
+      imageUrl: "src/assets/child.jpg",
+      tagLine: "Let Children Learn and Grow<span>Say No to Child Labor</span>",
+    },
+    {
+      imageUrl: "src/assets/healthcare.jpg",
+      tagLine: "Wellness Begins with Care: Health for Every Journey",
+    },
+    {
+      imageUrl: "src/assets/education.jpg",
+      tagLine: "Knowledge Unlocks Potential: Educate, Inspire, Transform",
+    },
+    {
+      imageUrl: "src/assets/ration.jpg",
+      tagLine:
+        "Nourishing Lives, One Bite at a Time<span>Savor the Goodness, Feed the Sou</span>",
+    },
+  ];
 
-  var $carousel = $("[data-carousel]").flickity(options);
-  var $slideContent = $(".slide-content");
-  var flkty = $carousel.data("flickity");
-  var selectedSlide = flkty.selectedElement;
+  /*=============== VARIABLES ===============*/
+  //#region
 
-  flkty.on("settle", function (index) {
-    selectedSlide = flkty.selectedElement;
-  });
+  /* Sélectionne l'élément du DOM avec la classe "dots" et le stocke dans la variable dotsContainer */
+  const dotsContainer = document.querySelector(".dots");
 
-  flkty.on("change", function (index) {
-    $slideContent.eq(index).removeClass("mask");
+  /* Sélectionne les éléments du DOM avec les classes "arrow_right" et "arrow_left" 
+	et les stocke dans les variables arrowRight et arrowLeft */
+  const arrowRight = document.querySelector(".arrow_right");
+  const arrowLeft = document.querySelector(".arrow_left");
 
-    setTimeout(function () {
-      $slideContent.addClass("mask");
-    }, 500);
-  });
+  /* Sélectionne les éléments du DOM ayant les classes 
+	"banner-img" et "#banner p" et les stocke dans les variables img et tagLine */
+  const img = document.querySelector(".banner-img");
+  const tagLine = document.querySelector("#banner p");
 
-  flkty.on("dragStart", function (event) {
-    var index = 0;
-    selectedSlide = flkty.selectedElement;
+  /* Initialise l'index à 0, représentant la position actuelle dans le carrousel. */
+  let index = 0;
 
-    if (event.layerX > 0) {
-      // direction right
-      index = $(selectedSlide).index() + 1;
+  //#endregion
+
+  /*=============== BULLET POINTS ===============*/
+  /* Fonction pour créer un bullet point dans le carrousel */
+  function createDot(i) {
+    /* Crée un élément div dans le DOM et lui ajoute la classe "dot" */
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+
+    /* Ajoute le bullet point au conteneur de points (dotsContainer) */
+    dotsContainer.appendChild(dot);
+
+    /* Ajoute un Event Listener au clic sur le bullet point, 
+		appelant la fonction updateCarousel avec l'index du bullet point en argument */
+    dot.addEventListener("click", () => {
+      updateCarousel(i);
+    });
+
+    /* CONDITION : si le bullet point créé correspond à l'index actuel du carrousel, 
+		ajoute la classe "dot_selected" afin qui soit en surbrillance. */
+    if (i === index) {
+      dot.classList.add("dot_selected");
+    }
+  }
+
+  /* Fonction permettant d'afficher les bullet points du carrousel */
+  function displayDots() {
+    /* Parcours tous les slides et crée un bullet point pour chaque image */
+    for (let i = 0; i < slides.length; i++) {
+      createDot(i);
+    }
+  }
+
+  /*=============== CARROUSEL ===============*/
+  /* Fonction permettant de mettre à jour le carrousel avec l'image 
+	et le texte correspondant à un index donné */
+  function updateCarousel(i) {
+    /* Sélectionne tous les bullet points du carrousel */
+    const selectDots = document.querySelectorAll(".dots .dot");
+
+    /* Retire la classe "dot_selected" du point actuel */
+    selectDots[index].classList.remove("dot_selected");
+
+    /* Mise à jour de l'index actuel */
+    index = i;
+
+    /* Met à jour l'image et le texte du carrousel en fonction du nouvel index */
+    img.src = slides[index].imageUrl;
+    tagLine.innerHTML = slides[index].tagLine;
+
+    /* Ajoute la classe "dot_selected" au nouveau bullet point */
+    selectDots[index].classList.add("dot_selected");
+  }
+
+  /* Fonction permettant d'effectuer le défilement du carrousel vers la droite 
+	ou la gauche dans la direction choisi */
+  function slide(direction) {
+    /* Sélectionne tous les points du carrousel */
+    const selectDots = document.querySelectorAll(".dots .dot");
+
+    /* Retire la classe "dot_selected" du bullet point actuel */
+    selectDots[index].classList.remove("dot_selected");
+
+    /*  Met à jour l'index en fonction de la direction */
+    if (direction === "right") {
+      index = (index + 1) % slides.length;
     } else {
-      // direction left
-      index = $(selectedSlide).index() - 1;
+      index = (index - 1 + slides.length) % slides.length;
     }
 
-    $slideContent.eq(index).removeClass("mask");
+    /* Met à jour l'image et le texte du carrousel en fonction du nouvel index. */
+    img.src = slides[index].imageUrl;
+    tagLine.innerHTML = slides[index].tagLine;
+
+    /* Ajoute la classe "dot_selected" au nouveau bullet point */
+    selectDots[index].classList.add("dot_selected");
+  }
+
+  /*=============== INTERACTION AVEC LES FLÈCHES & AUTOMATISATION ===============*/
+  function slideRight() {
+    slide("right");
+  }
+
+  function slideLeft() {
+    slide("left");
+  }
+
+  /* Fonction permettant le défilement automatique du carrousel */
+  function autoSlide() {
+    autoSlideInterval = setInterval(() => {
+      /* setInterval permet d'appeler la fonction slideRight toutes les X millisecondes */
+      slideRight();
+    }, 10000); /* 3000 millisecondes = 3 secondes */
+  }
+
+  /* Ajout des Event Listeners aux flèches pour un défilement manuel */
+  arrowRight.addEventListener("click", slideRight);
+  arrowLeft.addEventListener("click", slideLeft);
+
+  /* Ajoute un Event Listener pour arrêter le défilement automatique 
+	lorsqu'une interaction utilisateur est détectée */
+  dotsContainer.addEventListener("click", () => {
+    clearInterval(autoSlideInterval);
+    autoSlide();
   });
 
-  setTimeout(function () {
-    $slideContent.addClass("mask");
-  }, 500);
+  /* Fonction utilisée pour précharger les images du carrousel. */
+  function preloadImages() {
+    for (let i = 0; i < slides.length; i++) {
+      const imageObj = new Image();
+      imageObj.src = slides[i].imageUrl;
+    }
+  }
+
+  /*=============== APPEL DE FONCTIONS ===============*/
+  /* Démarrage du préchargement d'images */
+  preloadImages();
+
+  /* Démarrage du défilement automatique */
+  autoSlide();
+
+  /* Affichage des bullet points du carrousel */
+  displayDots();
 </script>
