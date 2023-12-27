@@ -2,72 +2,61 @@
 import Header from "../layouts/Header.astro";
 import EventCard from "../components/EventCard.astro";
 import Bg from "../assets/bg.jpg";
+import EventCarousel from "../components/EventCarousel.astro";
 ---
 
 <Header route="Events">
-  <div class="grid-container">
-    <div class="grid-item">
-      <EventCard
-        ImagePath={Bg}
-        Event="Learn How We Make Events"
-        Time="8:30pm"
-        Date="1/Sep/23"
-        Location="Darbhanga"
-      />
+  <main>
+    <div class="container">
+      <div class="heading">
+        <h1>Empowering Communities: Join Our Humanitarian Events</h1>
+        <p>
+          Explore our impactful community events aimed at creating positive
+          change. From initiatives supporting education to aiding the
+          underserved with essential nourishment, our events are designed to
+          uplift lives. Engage with us as we work towards a brighter, more
+          equitable future for all. Join our cause and contribute to building a
+          compassionate and supportive society.
+        </p>
+      </div>
+      <EventCarousel />
     </div>
-    <div class="grid-item">
-      <EventCard
-        ImagePath={Bg}
-        Event="Learn How We Make Events"
-        Time="8:30pm"
-        Date="1/Sep/23"
-        Location="Darbhanga"
-      />
-    </div>
-    <div class="grid-item">
-      <EventCard
-        ImagePath={Bg}
-        Event="Learn How We Make Events"
-        Time="8:30pm"
-        Date="1/Sep/23"
-        Location="Darbhanga"
-      />
-    </div>
-    <div class="grid-item">
-      <EventCard
-        ImagePath={Bg}
-        Event="Learn How We Make Events"
-        Time="8:30pm"
-        Date="1/Sep/23"
-        Location="Darbhanga"
-      />
-    </div>
-  </div>
+  </main>
 </Header>
 
 <style>
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 1rem;
-    padding: 3rem;
+  main {
+    background-color: var(--lightgreen2);
+    padding: 4rem 0;
   }
-
-  .grid-item {
-    /* padding: 25px; */
-    text-align: center;
-    padding: 2rem;
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
   }
-
-  @media (max-width: 700px) {
-    .grid-container {
-      grid-template-columns: 1fr;
-      width: 100%;
-      padding: 3rem 0.5rem;
+  .heading {
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 800;
+      padding: 1rem;
     }
-    .grid-item {
-      padding: 0;
+    p {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 600;
+      padding: 1rem;
+    }
+  }
+  @media (max-width: 750px) {
+    .heading {
+      h1 {
+        padding: 0.5rem;
+        text-align: left;
+      }
+      p {
+        padding: 0.5rem;
+        text-align: justify;
+      }
     }
   }
 </style>

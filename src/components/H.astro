@@ -191,6 +191,10 @@ import Fl from "../assets/Fl.jpg";
       color 0.5s ease-in-out;
     width: 100%;
     z-index: 1000;
+    transition:
+      background-color 0.5s ease-in-out,
+      color 0.5s ease-in-out,
+      border 0.5s ease-in-out;
   }
   .btn1 {
     padding: 0.9rem 2rem;
@@ -202,12 +206,21 @@ import Fl from "../assets/Fl.jpg";
     letter-spacing: 1px;
     transition:
       background-color 0.5s ease-in-out,
-      color 0.5s ease-in-out;
+      color 0.5s ease-in-out,
+      border 0.5s ease-in-out;
 
     width: 100%;
     z-index: 1000;
   }
   .btn:hover {
+    background-color: transparent;
+    color: var(--yellow);
+    border: 1px solid var(--yellow);
+  }
+  .btn1:hover {
+    background-color: var(--green);
+    color: var(--yellow);
+    border: none;
   }
   .button {
     display: flex;
@@ -216,6 +229,7 @@ import Fl from "../assets/Fl.jpg";
     gap: 1rem;
     padding: 3rem 0 0 0;
   }
+
   @media (max-width: 700px) {
     .carousel-button.prev,
     .carousel-button.next {
