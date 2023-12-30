@@ -13,6 +13,7 @@ import V2 from "../assets/v-2.jpg";
 import V3 from "../assets/v-3.jpg";
 import V4 from "../assets/v-4.jpeg";
 import SliderMain from "../components/SliderMain.astro";
+import Hero from "../components/Gallery.astro";
 ---
 
 <Header route="About">
@@ -41,15 +42,15 @@ import SliderMain from "../components/SliderMain.astro";
         <ul>
           <li class="check">
             <Image src={Check} alt="" />
-            <a href="/program">Education Program</a>
+            <a href="/education">Education Program</a>
           </li>
           <li class="check">
             <Image src={Check} alt="" />
-            <a href="/program">Healthcare Program</a>
+            <a href="/healthcare">Healthcare Program</a>
           </li>
           <li class="check">
             <Image src={Check} alt="" />
-            <a href="/program">Ration Program</a>
+            <a href="/ration">Ration Program</a>
           </li>
         </ul>
       </div>
@@ -82,7 +83,7 @@ import SliderMain from "../components/SliderMain.astro";
       <div class="joinv">
         <p>Join the volunteer team</p>
         <h1>Join your hand with us for a better life and future</h1>
-        <a href="" class="btn">Become a volunteer</a>
+        <a href="/volunteer" class="btn">Become a volunteer</a>
       </div>
     </div>
   </main>
@@ -145,6 +146,9 @@ import SliderMain from "../components/SliderMain.astro";
     font-size: 18px;
     line-height: 30px;
     font-weight: 600;
+  }
+  .check a:hover {
+    color: var(--hover-color);
   }
   .profile {
     display: flex;
