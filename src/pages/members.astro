@@ -2,4 +2,130 @@
 import Header from "../layouts/Header.astro";
 ---
 
-<Header route="Members" />
+<Header route="Members">
+  <main>
+    <div class="container">
+      <form id="form" class="form">
+        <h2>Become a Member!</h2>
+        <div class="form-control">
+          <label for="username">Name:</label>
+          <input type="text" id="username" placeholder="John Doe" />
+        </div>
+        <div class="form-control">
+          <label for="email">Email:</label>
+          <input type="text" id="email" placeholder="Youremail@gmail.com" />
+        </div>
+        <div class="form-control">
+          <label for="password">Mobile:</label>
+          <input type="password" id="password" placeholder="1234567890" />
+        </div>
+        <div class="form-control">
+          <label for="password2">Message:</label>
+          <input type="password" id="password2" placeholder="Message" />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </main>
+</Header>
+
+<style>
+  main {
+    background-image: url(../assets/green-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--free);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+  }
+
+  .container {
+    width: 400px;
+    border-radius: 0.6em;
+    padding: 20px;
+    background-color: var(--lightgreen2);
+    box-shadow:
+      20px 20px 60px #97a1a1,
+      -20px -20px 60px #ffffff;
+    margin: 20px auto;
+  }
+
+  .form {
+    padding: 10px;
+  }
+
+  .form h2 {
+    text-align: center;
+    margin: 0 0 20px;
+  }
+
+  .form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+
+  .form-control label {
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-control input {
+    border-radius: 6px;
+    background: var(--lightgreen2);
+    box-shadow:
+      inset 3px 3px 7px var(--lightgreen2),
+      inset -3px -3px 7px var(--lightgreen2);
+    min-height: 2.618em;
+    border: var(--yellow) solid 2px;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .form-control input:focus {
+    outline: 0;
+    border-color: var(--yellow);
+  }
+
+  .form-control small {
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+  }
+
+  .form-control.error small {
+    visibility: visible;
+  }
+
+  .form button {
+    cursor: pointer;
+    background: var(--green);
+
+    color: #fff;
+    font-size: 16px;
+    padding: 0.618em 1.2em;
+    border-radius: 0.4em;
+    border: none;
+    display: block;
+    margin-top: 1.2em;
+    width: 100%;
+  }
+
+  button:hover {
+    outline: 0;
+    background-color: var(--yellow);
+  }
+  @media (max-width: 700px) {
+    .container {
+      width: 100%;
+    }
+  }
+</style>

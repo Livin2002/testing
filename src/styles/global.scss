@@ -44,4 +44,21 @@ font-family: 'Nunito', sans-serif;
         --gray: gray;
         --lightgreen2: rgb(164, 189, 183, 0.5);
         --box: #ededed;
+        --hibiscus-love: #fc465c;
+            --fine-ii: #f9b198;
+            --afl: #fac8af;
+            --mexican-sky: #cfdddd;
+            --brasillia-peach: #facb85;
+            --free: #33032d;
+            --captured: #2b2120;
+        
+            --primary-color: var(--brasillia-peach);
+            --secondary-color: var(--hibiscus-love);
+            --tertiary-color: var(--fine-ii);
+            --quadrary-color: var(--afl);
+            --bg-color: var(--mexican-sky);
+            --text-color: var(--free);
+            --header-color: var(--captured);
+            --error-color: var(--hibiscus-love);
+            --success-color: #73d12e;
 }

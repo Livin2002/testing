@@ -35,21 +35,36 @@ import SliderVoulunteer from "../components/SliderVoulunteer.astro";
         <div class="input-container">
           <div class="input-box">
             <label for="name">Full Name:</label>
-            <input name="Name" id="name" type="text" />
+            <input name="Name" id="name" type="text" placeholder="John Doe" />
           </div>
           <div class="input-box">
             <label for="phone">Mobile:</label>
-            <input name="Phone" id="phone" type="number" />
+            <input
+              name="Phone"
+              id="phone"
+              type="number"
+              placeholder="1234567890"
+            />
           </div>
         </div>
         <div class="input-container">
           <div class="input-box">
             <label for="email">Email:</label>
-            <input name="Email" id="email" type="email" />
+            <input
+              name="Email"
+              id="email"
+              type="email"
+              placeholder="youremail@gmail.com"
+            />
           </div>
           <div class="input-box">
             <label for="qualification">Qualification:</label>
-            <input name="Qualification" id="qualification" type="text" />
+            <input
+              name="Qualification"
+              id="qualification"
+              placeholder="B.Sc. Data Science"
+              type="text"
+            />
           </div>
         </div>
         <div class="input-container">
@@ -69,18 +84,31 @@ import SliderVoulunteer from "../components/SliderVoulunteer.astro";
         <div class="input-container">
           <div class="input-box">
             <label for="occupation">Occupation:</label>
-            <input name="Occupation" id="occupation" type="text" />
+            <input
+              name="Occupation"
+              id="occupation"
+              placeholder="Manager"
+              type="text"
+            />
           </div>
           <div class="input-box">
             <label for="address">Address:</label>
-            <input name="Address" type="text" id="address" />
+            <input
+              name="Address"
+              type="text"
+              id="address"
+              placeholder="32 , cross road"
+            />
           </div>
         </div>
         <div class="input-container">
           <div class="input-box">
-            <label for="occupation">Message:</label>
-            <textarea class="text-area" name="Occupation" id="occupation"
-            ></textarea>
+            <label for="message">Message:</label>
+            <textarea
+              class="text-area"
+              placeholder="custom message"
+              name="Message"
+              id="message"></textarea>
           </div>
         </div>
 
@@ -88,11 +116,15 @@ import SliderVoulunteer from "../components/SliderVoulunteer.astro";
       </form>
     </div>
   </main>
+  <SliderVoulunteer />
 </Header>
 <style>
   main {
     min-height: 100vh;
-    /* background-color: var(--lightgreen2); */
+    background-image: url(../assets/bg-6.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 3rem;
   }
   .container {
