@@ -25,7 +25,9 @@ import Logo from "../assets/cropped-logo.png";
 
       <li><a href="/volunteer">Volunteer</a></li>
 
-      <a class="btn" href="/donate">Donate</a>
+      <li>
+        <a style="padding: .9rem 2rem;" class="btn" href="/donate">Donate</a>
+      </li>
     </ul>
     <div class="icon menu-btn">
       <i class="fas fa-bars"></i>
@@ -114,6 +116,10 @@ import Logo from "../assets/cropped-logo.png";
     text-decoration: none;
     transition: all 0.3s ease;
     padding: 0 1.5rem;
+  }
+  ul.menu-list li:last-child {
+    /* Your styles for the last li element here */
+    font-weight: bold; /* For example */
   }
   .menu-list li a:hover {
     color: yellow;
