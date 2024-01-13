@@ -27,7 +27,7 @@ const { name, work, title, content, imagePath, heading } = Astro.props;
 
 <style>
   .container {
-    max-width: 900px;
+    max-width: 1450px;
     margin: 0 auto;
   }
   .card-container {
@@ -38,6 +38,7 @@ const { name, work, title, content, imagePath, heading } = Astro.props;
     border-radius: 16px;
     background-color: white;
     min-height: 400px;
+    height: 500px;
     overflow: hidden;
   }
 
@@ -67,8 +68,8 @@ const { name, work, title, content, imagePath, heading } = Astro.props;
 
   img {
     height: 100%;
-    width: auto;
-    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
   }
   .description {
     color: #202d41;
